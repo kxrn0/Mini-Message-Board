@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Welcome to the #{title}
+	a(href="/new") New Post
+	ul
+		each post in posts
+			li
+				div.post
+					div.info
+						p.name= post.name
+						p.date= post.date
+					p.message= post.message

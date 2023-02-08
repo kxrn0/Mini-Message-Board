@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+	
+  form(method="POST" action="/new")
+    label(for="name")
+      span name
+      input(type="text" name="name")
+    label(for="message")
+      span message
+      textarea(name="message")
+    button(type="submit") Submit
+
+  a(href="/") Go Back
+
